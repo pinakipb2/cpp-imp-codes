@@ -51,6 +51,7 @@ int minCoins(int arr[], int n, int sum)
     {
         for(int j=0;j<sum+1;j++)
         {
+            // we have done INT_MAX - 1 because + 1 is done if the coin is taken, so -1 will prevent INT_MAX to go out of bounds
             if(i==0)
                 dp[i][j] = INT_MAX-1;
             if(j==0)
